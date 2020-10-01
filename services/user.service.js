@@ -59,11 +59,12 @@ let userService = {
     create: async (userParam) => {
         // Buscar email
         if (await User.findOne({ email: userParam.email })) {
+            // return { success: false, message: 'El email ya está registrado' };
             throw 'El email ya está registrado';
         }
 
         //añadir rol y estado de usuario 
-        userParam.role = roles.rol.STUDENT;
+        // userParam.role = roles.rol.STUDENT;
         userParam.status = userStatus.status.ACTIVE;
 
         const user = new User(userParam);

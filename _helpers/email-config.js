@@ -23,8 +23,8 @@ module.exports.SMTPTransport = nodemailer.createTransport({
     port: 465,
     secure: true, // upgrade later with STARTTLS
     auth: {
-        user: "mailtest@hersymac.com",
-        pass: "Megustanlosgatos123!"
+        user: "sendtestemail@ensomarketingdigital.com",
+        pass: "Sendtestemail#123"
     },
     tls: {
         // do not fail on invalid certs
